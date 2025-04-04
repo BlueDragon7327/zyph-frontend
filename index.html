@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zyph - DM Chat</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="login-container">
+		<h1 class="logo">Zyph</h1>
+		<div class="form-container" id="loginContainer">
+			<form id="loginForm">
+				<input type="email" id="loginEmail" placeholder="Email" required>
+				<input type="password" id="loginPassword" placeholder="Password" required>
+				<button type="submit">Login</button>
+			</form>
+			<p class="toggle-text">
+				Don't have an account? <span id="showRegister" class="toggle-link">Register</span>
+			</p>
+		</div>
+		<div class="form-container hidden" id="registerContainer">
+			<form id="registerForm">
+				<input type="text" id="registerUsername" placeholder="Username" required>
+				<input type="email" id="registerEmail" placeholder="Email" required>
+				<input type="password" id="registerPassword" placeholder="Password" required>
+				<button type="submit">Register</button>
+			</form>
+			<p class="toggle-text">
+				Already have an account? <span id="showLogin" class="toggle-link">Login</span>
+			</p>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

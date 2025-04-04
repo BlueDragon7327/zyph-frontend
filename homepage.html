@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zyph - Home</title>
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="logo">Zyph</h1>
+      <nav>
+        <ul class="nav-tabs">
+          <li class="tab active" data-tab="messages">Messages</li>
+          <li class="tab" data-tab="friends">Friends <span id="friendBadge" class="badge"></span></li>
+          <li class="tab" data-tab="profile">Profile</li>
+          <li class="tab" data-tab="settings">Settings</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section id="messages" class="tab-panel active">
+      <div class="tab-content" id="messagesContent">
+        <!-- NEW: Messages panel with two columns -->
+        <div class="messages-container">
+          <div class="conversations-list" id="conversationsList">
+            <!-- Conversations will load here -->
+            <p>Select a conversation from the list.</p>
+          </div>
+          <div class="chat-area" id="chatArea" style="display:none;">
+            <div id="chatHeader">
+              <h2>Conversation with <span id="conversationFriend"></span></h2>
+            </div>
+            <div id="messagesArea" class="messages">
+              <!-- Messages appear here -->
+            </div>
+            <form id="messageForm" class="message-form">
+              <input type="text" id="messageInput" placeholder="Type your message..." required>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="friends" class="tab-panel">
+      <div class="tab-content">
+        <h2>Friends</h2>
+        <p>Your friends list is currently empty.</p>
+        <!-- Friend Requests Section -->
+        <div class="friend-requests">
+          <h3>Friend Requests</h3>
+          <div id="friendRequestsList">
+            <!-- Friend requests will appear here -->
+          </div>
+        </div>
+        <!-- Friend request form remains as is -->
+        <form id="friendRequestForm">
+          <input type="text" id="friendUsername" placeholder="Friend's Username" required>
+          <button type="submit">Send Request</button>
+        </form>
+        <div id="friendResponse"></div>
+        <!-- NEW: Sent Friend Requests Section -->
+        <div class="sent-friend-requests">
+          <h3>Sent Friend Requests</h3>
+          <div id="sentFriendRequestsList">
+            <!-- Sent friend requests will appear here -->
+          </div>
+        </div>
+        <!-- NEW: Friends List Section -->
+        <div class="friends-list">
+          <h3>Your Friends</h3>
+          <div id="friendsList">
+            <!-- Friends will be listed here -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="profile" class="tab-panel">
+      <div class="tab-content">
+        <h2>Profile</h2>
+        <p>Update your profile details here.</p>
+      </div>
+    </section>
+    <section id="settings" class="tab-panel">
+      <div class="tab-content settings-content">
+        <h2>Settings</h2>
+        <p>Username: <span id="usernameDisplay"></span></p>
+        <button id="logoutButton">Logout</button>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" crossorigin="anonymous"></script>
+  <script src="homepage.js"></script>
+</body>
+</html>
