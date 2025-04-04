@@ -1,1 +1,1 @@
-frontend for Zyph. If you want the project's code, check (Zyph's GitHub)[https://github.com/BlueDragon7327/Zyph]
+Frontend for Zyph. If you want the project's code, check [Zyph's GitHub](https://github.com/BlueDragon7327/Zyph)
